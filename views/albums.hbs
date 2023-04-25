@@ -1,0 +1,22 @@
+
+{{#each albums}}
+
+    <h3>{{name}}</h3>
+
+    {{#if images.1.url }}
+
+        <img src="{{images.1.url}}" alt="artist cover">
+
+        {{else}}
+
+            <p>No album cover found</p>
+    
+    {{/if}}
+
+    <form action="/albumTracks/{{id}}" method="get">
+        <button type="submit">View Tracks</button>
+    </form>
+
+
+
+{{/each}}
